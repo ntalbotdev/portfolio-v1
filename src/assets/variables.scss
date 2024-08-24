@@ -1,0 +1,21 @@
+// COLORS
+$primary-color: #222429;
+$primary-color-dark: #1c1d20;
+$secondary-color: #c6d9f7;
+$accent-color: #0652dd;
+$accent-color-light: lighten($accent-color, 14%);
+$black: #000;
+$white: #fff;
+$success-color: #05c46b;
+$error-color: #ed4c67;
+$info-color: $accent-color;
+
+// PADDINGS
+$padding-xs: 0.25em;
+$padding-sm: 0.5em;
+$padding-md: 1em;
+$padding-lg: 2em;
+
+// SIZES
+$header-height: 70px;
+$max-width: 1280px;

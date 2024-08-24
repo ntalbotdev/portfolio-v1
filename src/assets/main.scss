@@ -1,0 +1,62 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border-radius: 10px;
+  background: $accent-color;
+  border: 3px solid $primary-color;
+}
+
+* {
+  padding: unset;
+  margin: unset;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+body:has(.hamburger-icon .active) {
+  overflow-y: hidden;
+}
+
+#app {
+  font-family: "Moderustic";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  height: 100%;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+main {
+  overflow-x: hidden;
+  background-color: inherit;
+}
+
+::selection {
+  background-color: $accent-color;
+  color: $secondary-color;
+}
+
+input,
+textarea,
+button,
+select,
+a,
+.hamburger-icon {
+  -webkit-tap-highlight-color: transparent;
+}
