@@ -35,7 +35,6 @@ export default {
   validations: rules,
   mounted() {
     grecaptcha.render("form__recaptcha", {
-      a
       callback: "",
     });
   },
