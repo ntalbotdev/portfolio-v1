@@ -34,20 +34,39 @@ export default {
   },
   validations: rules,
   mounted() {
-    grecaptcha.render("form__recaptcha", {
-      sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
-      callback: "",
-    });
+    if (typeof grecaptcha !== "undefined") {
+      grecaptcha.render("form__recaptcha", {
+        sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+        callback: "",
+      });
+    } else {
+      // If grecaptcha is not loaded, wait for it to load
+      const loadHandler = () => {
+        grecaptcha.render("form__recaptcha", {
+          sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+          callback: "",
+        });
+      };
+      window.addEventListener("load", loadHandler);
+      this.$once("beforeUnmount", () => {
+        window.removeEventListener("load", loadHandler);
+      });
+    }
   },
   methods: {
     sendEmail() {
       const recaptchaResponse = grecaptcha.getResponse();
 
       emailjs
-        .sendForm(process.env.VUE_APP_EMAILJS_SERVICE, process.env.VUE_APP_EMAILJS_TEMPLATE_ID, this.$refs.form, {
-          publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
-          gRecaptchaResponse: recaptchaResponse,
-        })
+        .sendForm(
+          process.env.VUE_APP_EMAILJS_SERVICE,
+          process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+          this.$refs.form,
+          {
+            publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
+            gRecaptchaResponse: recaptchaResponse,
+          }
+        )
         .then(
           () => {
             this.formSendSuccess = !this.formSendSuccess;
@@ -104,7 +123,7 @@ export default {
           v-if="formSendSuccess"
           @close="handleClose"
         >
-        {{ $t("contact.modals.successText") }}
+          {{ $t("contact.modals.successText") }}
         </AlertModal>
 
         <AlertModal
@@ -113,7 +132,7 @@ export default {
           v-if="formSendError"
           @close="handleClose"
         >
-        <span v-html="$t('contact.modals.errorText')"></span>
+          <span v-html="$t('contact.modals.errorText')"></span>
         </AlertModal>
         <input
           type="text"
@@ -133,7 +152,7 @@ export default {
           class="form__input"
           v-model="email"
           name="email"
-           :placeholder="$t('contact.form.email')"
+          :placeholder="$t('contact.form.email')"
           autocomplete="on"
           @blur="v$.email.$touch()"
           :class="{
@@ -146,7 +165,7 @@ export default {
           class="form__input"
           v-model="subject"
           name="subject"
-           :placeholder="$t('contact.form.subject')"
+          :placeholder="$t('contact.form.subject')"
           autocomplete="off"
           @blur="v$.subject.$touch()"
           :class="{
@@ -158,7 +177,7 @@ export default {
           class="form__textarea"
           v-model="message"
           name="message"
-           :placeholder="$t('contact.form.message')"
+          :placeholder="$t('contact.form.message')"
           rows="6"
           autocomplete="off"
           @blur="v$.message.$touch()"
