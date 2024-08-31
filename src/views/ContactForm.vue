@@ -1,12 +1,9 @@
 <script>
 import emailjs from "@emailjs/browser";
+import vueRecaptcha from "vue3-recaptcha2";
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 import AlertModal from "../components/AlertModal.vue";
-
-const isValidCaptcha = (value) => {
-  return grecaptcha.getResponse() !== "";
-};
 
 const rules = {
   name: { required },
@@ -20,7 +17,7 @@ export default {
     const v$ = useVuelidate();
     return { v$ };
   },
-  components: { AlertModal },
+  components: { AlertModal, vueRecaptcha },
   data() {
     return {
       formSendSuccess: false,
@@ -30,32 +27,24 @@ export default {
       email: "",
       subject: "",
       message: "",
+      recaptchaSiteKey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+      recaptchaResponse: null,
     };
   },
   validations: rules,
   mounted() {
-    if (typeof grecaptcha !== "undefined") {
-      grecaptcha.render("form__recaptcha", {
-        sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
-        callback: "",
-      });
-    } else {
-      // If grecaptcha is not loaded, wait for it to load
-      const loadHandler = () => {
-        grecaptcha.render("form__recaptcha", {
-          sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
-          callback: "",
-        });
-      };
-      window.addEventListener("load", loadHandler);
-      this.$once("beforeUnmount", () => {
-        window.removeEventListener("load", loadHandler);
-      });
-    }
+    const script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js?render=" + this.recaptchaSiteKey;
+    script.defer = true;
+    document.head.appendChild(script);
   },
   methods: {
+    onVerify(response) {
+      this.recaptchaResponse = response;
+    },
     sendEmail() {
-      const recaptchaResponse = grecaptcha.getResponse();
+      const recaptchaToken = this.recaptchaResponse;
 
       emailjs
         .sendForm(
@@ -64,7 +53,7 @@ export default {
           this.$refs.form,
           {
             publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
-            gRecaptchaResponse: recaptchaResponse,
+            gRecaptchaResponse: recaptchaToken,
           }
         )
         .then(
@@ -87,7 +76,7 @@ export default {
     },
     resetForm() {
       this.v$.$reset();
-      grecaptcha.reset();
+      this.$refs.vueRecaptcha.resetRecaptcha();
     },
     handleClose() {
       this.showAlert = false;
@@ -186,7 +175,13 @@ export default {
             'input-valid': this.message !== '',
           }"
         />
-        <div id="form__recaptcha"></div>
+        <vue-recaptcha
+          :sitekey="recaptchaSiteKey"
+          ref="vueRecaptcha"
+          :loadRecaptchaScript="true"
+          @verify="onVerify"
+        >
+        </vue-recaptcha>
 
         <button type="submit" class="form__btn" :disabled="v$.$invalid">
           {{ $t("contact.form.submit") }}
