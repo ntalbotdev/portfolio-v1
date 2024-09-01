@@ -19,9 +19,9 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 
 ## ✨ Features
 
-- Mobile first
-- EmailJS integration
-- Form validation
+- Mobile first (always!)
+- EmailJS integration (API)
+- Form validation (vuelidate)
 - Internationalization (en/fr)
 
 ## 📂 Repository Contents
@@ -36,7 +36,7 @@ This repository contains the following:
 
 ## 💾 Environment Variables
 
-To run this project, you will need to add the following environment variables to your `.env.local` file (create it in the root directory).
+To run this project, you will need to add the following environment variables to your `.env` file (create it in the root directory).
 
 `VUE_APP_EMAILJS_SERVICE_ID`
 
@@ -50,7 +50,7 @@ To run this project, you will need to add the following environment variables to
 
 ### Starting
 ```bash
-  cd my-project
+  cd portfolio-v1
   npm run dev
 ```
     

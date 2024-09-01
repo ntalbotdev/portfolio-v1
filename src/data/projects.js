@@ -9,6 +9,15 @@ export default {
 			siteUrl: "https://ntalbot.dev",
 			githubUrl: "https://github.com/ntalbotdev/portfolio-v1",
 		},
+		{
+			title: "SpaceX clone",
+			tags: ["Vue.js", "JS", "SCSS"],
+			description:
+				"This is a SpaceX homepage clone, developed using Vue.js. By closely replicating the design, I demonstrate my ability to translate design concepts into functional web applications, leveraging modern front-end technologies to deliver a polished and responsive experience.",
+			imageUrl: "/images/projects/spacex-clone.webp",
+			siteUrl: "https://spacex-clone-ntalbotdev.vercel.app/",
+			githubUrl: "https://github.com/ntalbotdev/spacex-clone",
+		},
 	],
 	fr: [
 		{
@@ -20,5 +29,15 @@ export default {
 			siteUrl: "https://ntalbot.dev",
 			githubUrl: "https://github.com/ntalbotdev/portfolio-v1",
 		},
+		{
+			title: "SpaceX clone",
+			tags: ["Vue.js", "JS", "SCSS"],
+			description:
+				"Ceci est une réplique de la page d'accueil de SpaceX, développée avec Vue.js. En reproduisant le design, je démontre ma capacité à transposer les concepts de design en applications web fonctionnelles, en exploitant les dernières technologies front-end pour offrir une expérience raffinée et réactive.",
+			imageUrl: "/images/projects/spacex-clone.webp",
+			siteUrl: "https://spacex-clone-ntalbotdev.vercel.app/",
+			githubUrl: "https://github.com/ntalbotdev/spacex-clone",
+		},
+		
 	],
 }

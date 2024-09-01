@@ -1,3 +1,15 @@
+<script>
+export default {
+  data () {
+    return {
+      skillset: {
+        
+      }
+    }
+  }
+}
+</script>
+
 <template>
   <section class="about">
     <div class="about__inner">

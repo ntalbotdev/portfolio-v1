@@ -57,7 +57,7 @@ export default {
 		projects: {
 			title: "Projects",
 			cardLinks: {
-				demo: "Visit site",
+				demo: "View Demo",
 				github: "View on GitHub"
 			},
 		},
@@ -120,7 +120,7 @@ export default {
 		projects: {
 			title: "Projets",
 			cardLinks: {
-				demo: "Voir le site",
+				demo: "Voir Demo",
 				github: "Voir sur GitHub"
 			}
 		},
