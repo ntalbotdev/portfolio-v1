@@ -4,7 +4,6 @@ import {
   faGithub,
   faCodepen,
   faLinkedinIn,
-  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import LanguageSelector from "@/components/LanguageSelector.vue";
@@ -197,14 +196,7 @@ export default {
           </a>
           <a
             class="social__link"
-            href="https://x.com/ntalbotdev"
-            target="_blank"
-          >
-            <FontAwesomeIcon :icon="faXTwitter" />
-          </a>
-          <a
-            class="social__link"
-            href="mailto:hello@ntalbot.dev"
+            href="mailto:hello@ntalbot.com"
             target="_blank"
           >
             <FontAwesomeIcon :icon="faEnvelope" />
