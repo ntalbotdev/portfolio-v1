@@ -14,6 +14,7 @@ import LanguageSelector from "@/components/LanguageSelector.vue";
 export default {
   data() {
     return {
+
       isOpen: false,
       scrolled: false,
     };
@@ -23,6 +24,11 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
+  },
+  computed: {
+    resumeUrl() {
+      return `/resume_${this.$i18n.locale}.pdf`;
+    }
   },
   methods: {
     toggleSidebar() {
@@ -149,7 +155,7 @@ export default {
             </router-link>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/resume.pdf">
+            <a class="nav__link" :href="resumeUrl" target="_blank">
               <span class="link__text">{{ $t("header.nav.resume") }}</span>
             </a>
           </li>

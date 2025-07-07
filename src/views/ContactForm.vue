@@ -1,12 +1,9 @@
 <script>
 import emailjs from "@emailjs/browser";
+import vueRecaptcha from "vue3-recaptcha2";
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
 import AlertModal from "../components/AlertModal.vue";
-
-const isValidCaptcha = (value) => {
-  return grecaptcha.getResponse() !== "";
-};
 
 const rules = {
   name: { required },
@@ -20,7 +17,7 @@ export default {
     const v$ = useVuelidate();
     return { v$ };
   },
-  components: { AlertModal },
+  components: { AlertModal, vueRecaptcha },
   data() {
     return {
       formSendSuccess: false,
@@ -30,24 +27,35 @@ export default {
       email: "",
       subject: "",
       message: "",
+      recaptchaSiteKey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+      recaptchaResponse: null,
     };
   },
   validations: rules,
   mounted() {
-    grecaptcha.render("form__recaptcha", {
-      sitekey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
-      callback: "",
-    });
+    const script = document.createElement("script");
+    script.src =
+      "https://www.google.com/recaptcha/api.js?render=" + this.recaptchaSiteKey;
+    script.defer = true;
+    document.head.appendChild(script);
   },
   methods: {
+    onVerify(response) {
+      this.recaptchaResponse = response;
+    },
     sendEmail() {
-      const recaptchaResponse = grecaptcha.getResponse();
+      const recaptchaToken = this.recaptchaResponse;
 
       emailjs
-        .sendForm(process.env.VUE_APP_EMAILJS_SERVICE, process.env.VUE_APP_EMAILJS_TEMPLATE_ID, this.$refs.form, {
-          publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
-          gRecaptchaResponse: recaptchaResponse,
-        })
+        .sendForm(
+          process.env.VUE_APP_EMAILJS_SERVICE,
+          process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+          this.$refs.form,
+          {
+            publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
+            gRecaptchaResponse: recaptchaToken,
+          }
+        )
         .then(
           () => {
             this.formSendSuccess = !this.formSendSuccess;
@@ -68,7 +76,7 @@ export default {
     },
     resetForm() {
       this.v$.$reset();
-      grecaptcha.reset();
+      this.$refs.vueRecaptcha.resetRecaptcha();
     },
     handleClose() {
       this.showAlert = false;
@@ -104,7 +112,7 @@ export default {
           v-if="formSendSuccess"
           @close="handleClose"
         >
-        {{ $t("contact.modals.successText") }}
+          {{ $t("contact.modals.successText") }}
         </AlertModal>
 
         <AlertModal
@@ -113,7 +121,7 @@ export default {
           v-if="formSendError"
           @close="handleClose"
         >
-        <span v-html="$t('contact.modals.errorText')"></span>
+          <span v-html="$t('contact.modals.errorText')"></span>
         </AlertModal>
         <input
           type="text"
@@ -133,7 +141,7 @@ export default {
           class="form__input"
           v-model="email"
           name="email"
-           :placeholder="$t('contact.form.email')"
+          :placeholder="$t('contact.form.email')"
           autocomplete="on"
           @blur="v$.email.$touch()"
           :class="{
@@ -146,7 +154,7 @@ export default {
           class="form__input"
           v-model="subject"
           name="subject"
-           :placeholder="$t('contact.form.subject')"
+          :placeholder="$t('contact.form.subject')"
           autocomplete="off"
           @blur="v$.subject.$touch()"
           :class="{
@@ -158,7 +166,7 @@ export default {
           class="form__textarea"
           v-model="message"
           name="message"
-           :placeholder="$t('contact.form.message')"
+          :placeholder="$t('contact.form.message')"
           rows="6"
           autocomplete="off"
           @blur="v$.message.$touch()"
@@ -167,7 +175,13 @@ export default {
             'input-valid': this.message !== '',
           }"
         />
-        <div id="form__recaptcha"></div>
+        <vue-recaptcha
+          :sitekey="recaptchaSiteKey"
+          ref="vueRecaptcha"
+          :loadRecaptchaScript="true"
+          @verify="onVerify"
+        >
+        </vue-recaptcha>
 
         <button type="submit" class="form__btn" :disabled="v$.$invalid">
           {{ $t("contact.form.submit") }}
