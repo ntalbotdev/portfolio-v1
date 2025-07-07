@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <p class="footer__text">&copy; 2024 Nicolas Talbot. {{  $t("footerRights") }}</p>
+    <p class="footer__text">&copy; {{ new Date().getFullYear() }} Nicolas Talbot. {{  $t("footerRights") }}</p>
   </footer>
 </template>
 
