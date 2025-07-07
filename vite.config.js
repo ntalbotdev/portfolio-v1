@@ -22,8 +22,5 @@ export default defineConfig({
         additionalData: `@import "@/assets/variables.scss";`
       }
     }
-  },
-  define: {
-    'process.env': process.env,
-  },
+  }
 })

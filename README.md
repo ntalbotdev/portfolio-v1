@@ -12,9 +12,9 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 
 ## 💻 Technologies
 
-- Vue.js 
+- Vue.js
 - SCSS
-- JS
+- JavaScript
 
 
 ## ✨ Features
@@ -38,22 +38,27 @@ This repository contains the following:
 
 To run this project, you will need to add the following environment variables to your `.env` file (create it in the root directory).
 
-`VUE_APP_EMAILJS_SERVICE_ID`
+`VITE_EMAILJS_SERVICE_ID`
 
-`VUE_APP_EMAILJS_TEMPLATE_ID`
+`VITE_EMAILJS_TEMPLATE_ID`
 
-`VUE_APP_EMAILJS_USER_ID`
+`VITE_EMAILJS_USER_ID`
 
-`VUE_APP_RECAPTCHA_SITE_KEY`
+`VITE_RECAPTCHA_SITE_KEY`
 
 ## 🚀 Getting Started
 ### Prerequisites
 - Node.js
 
-### Starting
+### Start
 ```bash
   cd portfolio-v1
   npm run dev
+```
+
+### Build
+```bash
+  npm run build
 ```
     
 ## 📘 License

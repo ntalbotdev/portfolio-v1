@@ -27,7 +27,7 @@ export default {
       email: "",
       subject: "",
       message: "",
-      recaptchaSiteKey: process.env.VUE_APP_RECAPTCHA_SITE_KEY,
+      recaptchaSiteKey: import.meta.env.VITE_RECAPTCHA_SITE_KEY,
       recaptchaResponse: null,
     };
   },
@@ -48,11 +48,11 @@ export default {
 
       emailjs
         .sendForm(
-          process.env.VUE_APP_EMAILJS_SERVICE,
-          process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+          import.meta.env.VITE_EMAILJS_SERVICE,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           this.$refs.form,
           {
-            publicKey: process.env.VUE_APP_EMAILJS_PUBLIC_KEY,
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             gRecaptchaResponse: recaptchaToken,
           }
         )
