@@ -24,13 +24,14 @@ export default {
 		about: {
 			title: "About me",
 			text: [
-				"Hi, I'm Nicolas, a passionate web developer with expertise in creating responsive and user-friendly websites.I specialize in front-end development using HTML, CSS, and JavaScript. My goal is to combine my technical skills with my creativity to deliver visually appealing and functional web solutions. I enjoy staying up-to-date with the latest web development trends and technologies to provide the best possible user experience. Feel free to explore my portfolio to see some of my previous projects and get in touch if you're interested in collaborating on a new project or have any questions.",
+				"I'm Nicolas—a Montreal-based web developer. I build fast, responsive websites that turn visitors into customers by combining robust front-end skills (HTML, CSS, JavaScript) with eye-catching design and best-in-class UX. Take a look at my past work, and let's talk about how we can make your next project shine.",
 				"Let's create something amazing together!",
 			],
 			skills: "Skills",
 			skillsetTitle: [
 				"Front-end",
-				"General",
+				"Back-end",
+				"Tools & Platforms",
 				"Certifications",
 				"Soft skills"
 			],
@@ -44,7 +45,7 @@ export default {
 			text: "Feel free to contact me if you have any questions or would like to work together.",
 			modals: {
 				successText: "Your message has been sent, you will receive a response shortly.",
-				errorText: "Your message couldn't be sent, try again later or email me directly at <a href='mailto:hello@ntalbot.dev'>hello@ntalbot.dev</a>."
+				errorText: "Your message couldn't be sent, try again later or email me directly at <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
 			},
 			form: {
 				name: "Your Name",
@@ -87,13 +88,14 @@ export default {
 		about: {
 			title: "À propos de moi",
 			text: [
-				"Bonjour, je suis Nicolas, développeur web passionné avec une expertise dans la création de sites web responsives et facile à utiliser. Je me spécialise dans le développement front-end en utilisant HTML, CSS et JavaScript. Mon objectif est de combiner mes compétences techniques avec ma créativité pour offrir des solutions web visuellement attrayantes et fonctionnelles. Je me tiens à jour avec les dernières tendances et technologies du développement web pour offrir la meilleure expérience utilisateur possible. N'hésitez pas à explorer mon portfolio pour découvrir quelques-uns de mes projets précédents et à me contacter si vous êtes intéressé à collaborer sur un nouveau projet ou si vous avez des questions.",
+				"Je suis Nicolas, développeur web basé à Montréal. Je crée des sites rapides et adaptatifs qui transforment les visiteurs en clients en alliant de solides compétences front-end (HTML, CSS, JavaScript) à un design percutant et une UX exemplaire. Découvrez mes réalisations, et parlons de la façon dont nous pouvons faire briller votre prochain projet.",
 				"Créons quelque chose d'incroyable ensemble!",
 			],
 			skills: "Compétences",
 			skillsetTitle: [
 				"Front-end",
-				"Général",
+				"Back-end",
+				"Outils et Plateformes",
 				"Certifications",
 				"Compétences sociales"
 			],
@@ -107,7 +109,7 @@ export default {
 			text: "N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler ensemble.",
 			modals: {
 				successText: "Votre message a été envoyé, vous recevrez une réponse sous peu.",
-				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement à <a href='mailto:hello@ntalbot.dev'>hello@ntalbot.dev</a>."
+				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement à <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
 			},
 			form: {
 				name: "Votre Nom",

@@ -20,6 +20,7 @@ export default {
       <p class="about__text">{{ $t("about.text[1]") }}</p>
     </div>
 
+    <!-- FRONT-END -->
     <div class="about__inner">
       <h2 class="about__title">{{ $t("about.skills") }}</h2>
       <div class="skillset__wrapper">
@@ -53,8 +54,32 @@ export default {
           </ul>
         </div>
 
+        <!-- BACK-END & APIS -->
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[1]") }}</h3>
+          <ul class="skillset__list">
+            <li class="skillset__list-item">
+              <img src="/images/icons/nodejs.svg" alt="Node.js" />
+              <span class="skillset__list-text">Node.js</span>
+            </li>
+            <li class="skillset__list-item">
+              <img src="/images/icons/rest.svg" alt="REST" />
+              <span class="skillset__list-text">REST API</span>
+            </li>
+            <li class="skillset__list-item">
+              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
+              <span class="skillset__list-text">Wordpress</span>
+            </li>
+            <li class="skillset__list-item">
+              <img src="/images/icons/strapi.svg" alt="Strapi" />
+              <span class="skillset__list-text">Strapi</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TOOLS & PLATFORMS -->
+        <div class="skillset">
+          <h3 class="skillset__title">{{ $t("about.skillsetTitle[2]") }}</h3>
           <ul class="skillset__list">
             <li class="skillset__list-item">
               <img src="/images/icons/figma.svg" alt="Figma" />
@@ -67,10 +92,6 @@ export default {
             <li class="skillset__list-item">
               <img src="/images/icons/github.svg" alt="GitHub" />
               <span class="skillset__list-text">GitHub</span>
-            </li>
-            <li class="skillset__list-item">
-              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
-              <span class="skillset__list-text">Wordpress</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/cloudflare.svg" alt="Cloudflare" />
@@ -87,8 +108,9 @@ export default {
           </ul>
         </div>
 
+        <!-- CERTIFICATIONS -->
         <div class="skillset">
-          <h3 class="skillset__title">{{ $t("about.skillsetTitle[2]") }}</h3>
+          <h3 class="skillset__title">{{ $t("about.skillsetTitle[3]") }}</h3>
           <ul class="skillset__list--large">
             <li class="skillset__list-item">
               <a class="skillset__list-link" href="">{{ $t("about.certificates[0]") }}</a>
@@ -96,8 +118,9 @@ export default {
           </ul>
         </div>
 
+        <!-- SOFT SKILLS -->
         <div class="skillset">
-          <h3 class="skillset__title">{{ $t("about.skillsetTitle[3]") }}</h3>
+          <h3 class="skillset__title">{{ $t("about.skillsetTitle[4]") }}</h3>
           <ul class="skillset__list--large">
             <li class="skillset__list-item">
               <p>
