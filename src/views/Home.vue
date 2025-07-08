@@ -7,6 +7,7 @@ export default {
     Landing,
     AboutMe: defineAsyncComponent(() => import("./AboutMe.vue")),
     ContactForm: defineAsyncComponent(() => import("./ContactForm.vue")),
+    ProjectsButton: defineAsyncComponent(() => import("../components/ProjectsButton.vue")),
   },
 };
 </script>
@@ -14,5 +15,6 @@ export default {
 <template>
     <Landing />
     <AboutMe />
+    <ProjectsButton />
     <ContactForm />
 </template>

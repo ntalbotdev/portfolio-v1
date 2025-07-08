@@ -1,3 +1,4 @@
+import ProjectsButton from "@/components/ProjectsButton.vue";
 
 
 export default {
@@ -24,8 +25,8 @@ export default {
 		about: {
 			title: "About me",
 			text: [
-				"I'm Nicolas—a Montreal-based web developer. I build fast, responsive websites that turn visitors into customers by combining robust front-end skills (HTML, CSS, JavaScript) with eye-catching design and best-in-class UX. Take a look at my past work, and let's talk about how we can make your next project shine.",
-				"Let's create something amazing together!",
+				"I'm Nicolas, a web developer based in Montreal who delights in turning design concepts into lightning-fast, responsive experiences. Whether I'm sculpting intuitive front-end interfaces with modern JavaScript frameworks or architecting dependable back-end services and clean, scalable APIs, my focus is always on performance, accessibility and user satisfaction.",
+				"Let's collaborate to create something extraordinary!",
 			],
 			skills: "Skills",
 			skillsetTitle: [
@@ -61,13 +62,14 @@ export default {
 				demo: "View Demo",
 				github: "View on GitHub"
 			},
+			viewProjectsBtn: "View my work",
 		},
 		footerRights:  "All rights reserved.",
 		modalClose: "Close",
 	},
 	fr: {
 		header: {
-			metaTitle: "Développeur Web",
+			metaTitle: "Développeur web",
 			button: "Me contacter",
 			nav: {
 				home: "Accueil",
@@ -88,8 +90,8 @@ export default {
 		about: {
 			title: "À propos de moi",
 			text: [
-				"Je suis Nicolas, développeur web basé à Montréal. Je crée des sites rapides et adaptatifs qui transforment les visiteurs en clients en alliant de solides compétences front-end (HTML, CSS, JavaScript) à un design percutant et une UX exemplaire. Découvrez mes réalisations, et parlons de la façon dont nous pouvons faire briller votre prochain projet.",
-				"Créons quelque chose d'incroyable ensemble!",
+				"Je suis Nicolas, développeur web de Montréal, et j'excelle à transformer des concepts de design en expériences ultra-rapides et fluides. Que ce soit pour façonner des interfaces front-end intuitives avec des frameworks JavaScript modernes ou architecturer des services back-end robustes et des API évolutives, je place toujours la performance, l'accessibilité et la satisfaction utilisateur au cœur de mon travail.",
+				"Collaborons pour créer quelque chose d'exceptionnel !",
 			],
 			skills: "Compétences",
 			skillsetTitle: [
@@ -124,7 +126,8 @@ export default {
 			cardLinks: {
 				demo: "Voir Demo",
 				github: "Voir sur GitHub"
-			}
+			},
+			viewProjectsBtn: "Voir mes réalisations",
 		},
 		footerRights:  "Tous droits réservés.",
 		modalClose: "Fermer",
