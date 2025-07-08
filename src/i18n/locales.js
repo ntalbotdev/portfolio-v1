@@ -31,7 +31,7 @@ export default {
 			skillsetTitle: [
 				"Front-end",
 				"Back-end",
-				"Tools & Platforms",
+				"Tooling & Infrastructure",
 				"Certifications",
 				"Soft skills"
 			],
@@ -45,7 +45,7 @@ export default {
 			text: "Feel free to contact me if you have any questions or would like to work together.",
 			modals: {
 				successText: "Your message has been sent, you will receive a response shortly.",
-				errorText: "Your message couldn't be sent, try again later or email me directly at <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
+				errorText: "Your message couldn't be sent, try again later or email me directly."
 			},
 			form: {
 				name: "Your Name",
@@ -95,12 +95,12 @@ export default {
 			skillsetTitle: [
 				"Front-end",
 				"Back-end",
-				"Outils et Plateformes",
+				"Outils et infrastructures",
 				"Certifications",
 				"Compétences sociales"
 			],
 			certificates: [
-				"Certificat professionnel de développeur Front-End délivré par IBM"
+				"Certificat professionnel de développeur Front-end délivré par IBM"
 			],
 			softSkills: "Adaptabilité, écoute active, collaboration, créativité, patience, résolution de problèmes, autonomie, leadership et bien d'autres encore."
 		},
@@ -109,7 +109,7 @@ export default {
 			text: "N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler ensemble.",
 			modals: {
 				successText: "Votre message a été envoyé, vous recevrez une réponse sous peu.",
-				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement à <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
+				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement via email."
 			},
 			form: {
 				name: "Votre Nom",

@@ -13,9 +13,9 @@ import LanguageSelector from "@/components/LanguageSelector.vue";
 export default {
   data() {
     return {
-
       isOpen: false,
       scrolled: false,
+      emailAddress: import.meta.env.VITE_EMAIL_ADDRESS,
     };
   },
   mounted() {
@@ -196,7 +196,7 @@ export default {
           </a>
           <a
             class="social__link"
-            href="mailto:hello@ntalbot.com"
+            :href="`mailto:${emailAddress}`"
             target="_blank"
           >
             <FontAwesomeIcon :icon="faEnvelope" />

@@ -20,6 +20,7 @@ export default {
   components: { AlertModal, vueRecaptcha },
   data() {
     return {
+      emailAddress: import.meta.env.VITE_EMAIL_ADDRESS,
       formSendSuccess: false,
       formSendError: false,
       isAlertVisible: false,
@@ -103,6 +104,9 @@ export default {
       <h2 class="contact__title">{{ $t("contact.title") }}</h2>
       <p class="contact__text">
         {{ $t("contact.text") }}
+        <div class="contact__email">
+          <a :href="`mailto:${emailAddress}`">{{ emailAddress }}</a>
+        </div>
       </p>
 
       <form class="contact__form" ref="form" @submit.prevent="sendEmail">
@@ -228,6 +232,22 @@ export default {
   margin-bottom: $padding-lg;
   text-align: center;
   font-weight: 300;
+}
+
+.contact__email {
+  margin-top: $padding-sm;
+  font-weight: 500;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    border-bottom: 1px solid $secondary-color;
+
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+    }
+  }
 }
 
 .contact__form {
