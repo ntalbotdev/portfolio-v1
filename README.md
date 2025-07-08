@@ -1,21 +1,20 @@
 
 # Portfolio
 
-This portfolio is a showcase of my work as a front-end developer, featuring a selection of projects that highlight my skills in Vue.js, HTML, CSS, and JavaScript. Each project includes a brief description, screenshots, and a link to the live demo or code repository.
+This portfolio is a showcase of my work as a front-end developer, featuring a selection of projects that highlight my skills in Vue, HTML, CSS, and JavaScript. Each project includes a brief description, screenshots, and a link to the live demo or code repository.
 
 #### [LIVE DEMO](https://ntalbot.com)
 
 ## 📷 Screenshot
 
-![Screenshot](https://i.imgur.com/Fn9h12D.png)
+![Screenshot](https://i.imgur.com/5LZfFRh.png)
 
 
 ## 💻 Technologies
 
-- Vue.js
-- SCSS
+- Vue
 - JavaScript
-
+- SCSS
 
 ## ✨ Features
 
@@ -28,7 +27,7 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 
 This repository contains the following:
 
-- `src/`: The source code for the portfolio, built with Vue.js
+- `src/`: The source code for the portfolio, built with Vue
 - `public/`: The public assets for the portfolio, including images and index.html
 - `src/data/projects.js`: A JavaScript file containing data for my projects, used to populate the portfolio
 - `src/assets/`: The SCSS files for styling the portfolio
