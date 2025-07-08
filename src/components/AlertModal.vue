@@ -52,7 +52,7 @@ export default {
 </script>
 
 <template>
-  <div class="alert-modal__backdrop" v-if="isAlertVisible" v-show="isAlertVisible">
+  <div class="alert-modal__backdrop" v-if="isAlertVisible" v-show="isAlertVisible" role="alert">
     <div :class="alertClass">
       <div class="alert-modal__icon-wrapper">
         <img class="alert-modal__icon" :src="iconSrc" alt="" />

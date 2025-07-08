@@ -20,6 +20,7 @@ export default {
   components: { AlertModal, vueRecaptcha },
   data() {
     return {
+      emailAddress: import.meta.env.VITE_EMAIL_ADDRESS,
       formSendSuccess: false,
       formSendError: false,
       isAlertVisible: false,
@@ -103,9 +104,12 @@ export default {
       <h2 class="contact__title">{{ $t("contact.title") }}</h2>
       <p class="contact__text">
         {{ $t("contact.text") }}
+        <div class="contact__email">
+          <a :href="`mailto:${emailAddress}`">{{ emailAddress }}</a>
+        </div>
       </p>
 
-      <form class="contact__form" ref="form" @submit.prevent="sendEmail">
+      <form class="contact__form" ref="form" @submit.prevent="sendEmail" aria-labelledby="contact__title">
         <AlertModal
           type="success"
           :showAlert="isAlertVisible"
@@ -135,6 +139,7 @@ export default {
             'input-error': v$.name.$error,
             'input-valid': this.name !== '',
           }"
+          aria-required="true"
         />
         <input
           type="email"
@@ -148,6 +153,7 @@ export default {
             'input-error': v$.email.$error,
             'input-valid': this.email !== '' && this.email.includes('@'),
           }"
+          aria-required="true"
         />
         <input
           type="text"
@@ -161,6 +167,7 @@ export default {
             'input-error': v$.subject.$error,
             'input-valid': this.subject !== '',
           }"
+          aria-required="true"
         />
         <textarea
           class="form__textarea"
@@ -174,6 +181,7 @@ export default {
             'input-error': v$.message.$error,
             'input-valid': this.message !== '',
           }"
+          aria-required="true"
         />
         <vue-recaptcha
           :sitekey="recaptchaSiteKey"
@@ -230,6 +238,22 @@ export default {
   font-weight: 300;
 }
 
+.contact__email {
+  margin-top: $padding-sm;
+  font-weight: 500;
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    border-bottom: 1px solid $secondary-color;
+
+    &:hover {
+      border-color: $accent-color;
+      color: $accent-color;
+    }
+  }
+}
+
 .contact__form {
   display: flex;
   flex-direction: column;
@@ -281,10 +305,12 @@ export default {
   padding: $padding-md;
   border-radius: 3px;
   font-size: 1rem;
+  font-family: inherit;
   border: none;
   outline: none;
   background-color: $accent-color;
   color: $secondary-color;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 
   &:hover {
     opacity: 0.7;

@@ -1,3 +1,4 @@
+import ProjectsButton from "@/components/ProjectsButton.vue";
 
 
 export default {
@@ -24,14 +25,14 @@ export default {
 		about: {
 			title: "About me",
 			text: [
-				"I'm Nicolas—a Montreal-based web developer. I build fast, responsive websites that turn visitors into customers by combining robust front-end skills (HTML, CSS, JavaScript) with eye-catching design and best-in-class UX. Take a look at my past work, and let's talk about how we can make your next project shine.",
-				"Let's create something amazing together!",
+				"I'm Nicolas, a web developer based in Montreal who delights in turning design concepts into lightning-fast, responsive experiences. Whether I'm sculpting intuitive front-end interfaces with modern JavaScript frameworks or architecting dependable back-end services and clean, scalable APIs, my focus is always on performance, accessibility and user satisfaction.",
+				"Let's collaborate to create something extraordinary!",
 			],
 			skills: "Skills",
 			skillsetTitle: [
 				"Front-end",
 				"Back-end",
-				"Tools & Platforms",
+				"Tooling & Infrastructure",
 				"Certifications",
 				"Soft skills"
 			],
@@ -45,7 +46,7 @@ export default {
 			text: "Feel free to contact me if you have any questions or would like to work together.",
 			modals: {
 				successText: "Your message has been sent, you will receive a response shortly.",
-				errorText: "Your message couldn't be sent, try again later or email me directly at <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
+				errorText: "Your message couldn't be sent, try again later or email me directly."
 			},
 			form: {
 				name: "Your Name",
@@ -58,16 +59,17 @@ export default {
 		projects: {
 			title: "Projects",
 			cardLinks: {
-				demo: "View Demo",
+				demo: "View demo",
 				github: "View on GitHub"
 			},
+			viewProjectsBtn: "View my work",
 		},
 		footerRights:  "All rights reserved.",
 		modalClose: "Close",
 	},
 	fr: {
 		header: {
-			metaTitle: "Développeur Web",
+			metaTitle: "Développeur web",
 			button: "Me contacter",
 			nav: {
 				home: "Accueil",
@@ -88,19 +90,19 @@ export default {
 		about: {
 			title: "À propos de moi",
 			text: [
-				"Je suis Nicolas, développeur web basé à Montréal. Je crée des sites rapides et adaptatifs qui transforment les visiteurs en clients en alliant de solides compétences front-end (HTML, CSS, JavaScript) à un design percutant et une UX exemplaire. Découvrez mes réalisations, et parlons de la façon dont nous pouvons faire briller votre prochain projet.",
-				"Créons quelque chose d'incroyable ensemble!",
+				"Je suis Nicolas, développeur web de Montréal, et j'excelle à transformer des concepts de design en expériences ultra-rapides et fluides. Que ce soit pour façonner des interfaces front-end intuitives avec des frameworks JavaScript modernes ou architecturer des services back-end robustes et des API évolutives, je place toujours la performance, l'accessibilité et la satisfaction utilisateur au cœur de mon travail.",
+				"Collaborons pour créer quelque chose d'exceptionnel !",
 			],
 			skills: "Compétences",
 			skillsetTitle: [
 				"Front-end",
 				"Back-end",
-				"Outils et Plateformes",
+				"Outils et infrastructures",
 				"Certifications",
 				"Compétences sociales"
 			],
 			certificates: [
-				"Certificat professionnel de développeur Front-End délivré par IBM"
+				"Certificat professionnel de développeur Front-end délivré par IBM"
 			],
 			softSkills: "Adaptabilité, écoute active, collaboration, créativité, patience, résolution de problèmes, autonomie, leadership et bien d'autres encore."
 		},
@@ -109,11 +111,11 @@ export default {
 			text: "N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler ensemble.",
 			modals: {
 				successText: "Votre message a été envoyé, vous recevrez une réponse sous peu.",
-				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement à <a href='mailto:hello@ntalbot.com'>hello@ntalbot.com</a>."
+				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement via courriel."
 			},
 			form: {
-				name: "Votre Nom",
-				email: "Votre Courriel",
+				name: "Votre nom",
+				email: "Votre courriel",
 				subject: "Sujet",
 				message: "Message",
 				submit: "Envoyer"
@@ -122,9 +124,10 @@ export default {
 		projects: {
 			title: "Projets",
 			cardLinks: {
-				demo: "Voir Demo",
+				demo: "Voir démo",
 				github: "Voir sur GitHub"
-			}
+			},
+			viewProjectsBtn: "Voir mes réalisations",
 		},
 		footerRights:  "Tous droits réservés.",
 		modalClose: "Fermer",

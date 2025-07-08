@@ -40,12 +40,12 @@ export default {
               <span class="skillset__list-text">JavaScript</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/vuejs.svg" alt="Vue.js" />
-              <span class="skillset__list-text">Vue.js</span>
+              <img src="/images/icons/vue.svg" alt="Vue" />
+              <span class="skillset__list-text">Vue</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/react.svg" alt="React" />
-              <span class="skillset__list-text">React</span>
+              <img src="/images/icons/nuxt.svg" alt="Nuxt" />
+              <span class="skillset__list-text">Nuxt</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/sass.svg" alt="Sass" />
@@ -59,20 +59,24 @@ export default {
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[1]") }}</h3>
           <ul class="skillset__list">
             <li class="skillset__list-item">
-              <img src="/images/icons/nodejs.svg" alt="Node.js" />
-              <span class="skillset__list-text">Node.js</span>
+              <img src="/images/icons/node.svg" alt="Node" />
+              <span class="skillset__list-text">Node</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/rest.svg" alt="REST" />
-              <span class="skillset__list-text">REST API</span>
+              <img src="/images/icons/express.svg" alt="Express" />
+              <span class="skillset__list-text">Express</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
-              <span class="skillset__list-text">Wordpress</span>
+              <img src="/images/icons/rest.svg" alt="REST APIs" />
+              <span class="skillset__list-text">REST APIs</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/strapi.svg" alt="Strapi" />
               <span class="skillset__list-text">Strapi</span>
+            </li>
+            <li class="skillset__list-item">
+              <img src="/images/icons/supabase.svg" alt="Supabase" />
+              <span class="skillset__list-text">Supabase</span>
             </li>
           </ul>
         </div>
@@ -82,10 +86,6 @@ export default {
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[2]") }}</h3>
           <ul class="skillset__list">
             <li class="skillset__list-item">
-              <img src="/images/icons/figma.svg" alt="Figma" />
-              <span class="skillset__list-text">Figma</span>
-            </li>
-            <li class="skillset__list-item">
               <img src="/images/icons/git.svg" alt="Git" />
               <span class="skillset__list-text">Git</span>
             </li>
@@ -94,16 +94,20 @@ export default {
               <span class="skillset__list-text">GitHub</span>
             </li>
             <li class="skillset__list-item">
+              <img src="/images/icons/vscode.svg" alt="VS Code" />
+              <span class="skillset__list-text">VS Code</span>
+            </li>
+            <li class="skillset__list-item">
               <img src="/images/icons/cloudflare.svg" alt="Cloudflare" />
               <span class="skillset__list-text">Cloudflare</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/seo.svg" alt="SEO" />
-              <span class="skillset__list-text">SEO</span>
+              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
+              <span class="skillset__list-text">Wordpress</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/vscode.svg" alt="VS Code" />
-              <span class="skillset__list-text">VS Code</span>
+              <img src="/images/icons/seo.svg" alt="SEO" />
+              <span class="skillset__list-text">SEO</span>
             </li>
           </ul>
         </div>

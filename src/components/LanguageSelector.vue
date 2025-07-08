@@ -5,40 +5,46 @@
       v-show="$i18n.locale === 'fr'"
       @click="$i18n.locale = 'en'"
     >
-	<img src="/images/icons/flag-uk.svg" alt="EN" title="English" />
+      en
     </button>
     <button
       class="language-selector__btn"
       v-show="$i18n.locale === 'en'"
       @click="$i18n.locale = 'fr'"
     >
-      <img src="/images/icons/flag-fr.svg" alt="FR" title="Français" />
+      fr
     </button>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .language-selector {
-	margin-right: $padding-md;
-	display: flex;
-	align-items: center;
+  margin-right: $padding-md;
+  display: flex;
+  align-items: center;
 }
 
 .language-selector__btn {
-	display: flex;
-	outline: 0;
-	border: 0;
-	background: none;
-	transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  outline: 0;
+  border: 0;
+  background: rgba($secondary-color, 0.75);
+  transition: opacity 0.3s;
+  padding: $padding-sm;
+  font-size: 1rem;
+  color: $primary-color;
+  border-radius: 3px;
+  text-transform: uppercase;
 
-	&:hover {
-		cursor: pointer;
-		opacity: 0.7;
-		transition: opacity 0.3s;
-	}
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
 }
 
 img {
-	height: 30px;
+  height: 30px;
 }
 </style>

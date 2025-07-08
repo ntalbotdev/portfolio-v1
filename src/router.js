@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import i18n from './i18n/i18n.js';
-import { watch } from 'vue'
+import { watch } from 'vue';
 import Home from './views/Home.vue';
 import Projects from './views/Projects.vue';
 
@@ -26,6 +26,18 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+   scrollBehavior(to, from, savedPosition) {
+    // if the user used back/forward, respect that
+    if (savedPosition) {
+      return savedPosition
+    }
+    // only scroll to top on these two paths
+    if (to.path === '/projects') {
+      return { left: 0, top: 0 }
+    }
+    // otherwise, don’t change scroll position
+    return false
+  }
 });
 
 router.beforeEach((to, from, next) => {

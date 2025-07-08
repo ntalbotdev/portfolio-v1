@@ -13,9 +13,9 @@ import LanguageSelector from "@/components/LanguageSelector.vue";
 export default {
   data() {
     return {
-
       isOpen: false,
       scrolled: false,
+      emailAddress: import.meta.env.VITE_EMAIL_ADDRESS,
     };
   },
   mounted() {
@@ -27,7 +27,7 @@ export default {
   computed: {
     resumeUrl() {
       return `/resume_${this.$i18n.locale}.pdf`;
-    }
+    },
   },
   methods: {
     toggleSidebar() {
@@ -196,7 +196,7 @@ export default {
           </a>
           <a
             class="social__link"
-            href="mailto:hello@ntalbot.com"
+            :href="`mailto:${emailAddress}`"
             target="_blank"
           >
             <FontAwesomeIcon :icon="faEnvelope" />
@@ -295,6 +295,7 @@ export default {
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease-out;
+  
 
   &:hover {
     color: $secondary-color;
@@ -306,11 +307,10 @@ export default {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: rgba($white, 0.65);
+    background: rgba($secondary-color, 0.75);
     left: 0;
     top: 0;
     z-index: -2;
-    border-radius: 3px;
   }
 
   &:before {
@@ -331,7 +331,7 @@ export default {
 }
 
 .header__nav--hamburger {
-  background-color: rgba($secondary-color, 0.7);
+  background-color: rgba($secondary-color, 0.75);
   backdrop-filter: blur(4px);
   position: fixed;
   right: 0;
