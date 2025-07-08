@@ -1,14 +1,21 @@
+@use "sass:color";
+
 // COLORS
+
 $primary-color: #222429;
 $primary-color-dark: #1c1d20;
 $secondary-color: #c6d9f7;
 $accent-color: #0652dd;
-$accent-color-light: lighten($accent-color, 14%);
+$accent-color-light: color.scale($accent-color, $lightness: 14%);
+$accent-color-dark: color.scale($accent-color, $lightness: -6%);
+$accent-color-darker: color.scale($accent-color, $lightness: -12%);
 $black: #000;
+$black-light: color.scale($black, $lightness: 5%);
 $white: #fff;
 $success-color: #05c46b;
 $error-color: #ed4c67;
 $info-color: $accent-color;
+$landing-image-tint: color.adjust($accent-color, $lightness: -50%);
 
 // PADDINGS
 $padding-xs: 0.25em;

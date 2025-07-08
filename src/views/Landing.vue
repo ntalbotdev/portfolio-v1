@@ -95,7 +95,8 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(darken($accent-color, 50%), 0.2);
+    background: $landing-image-tint;
+    opacity: 0.2;
   }
 }
 

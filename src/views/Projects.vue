@@ -230,7 +230,7 @@ import projects from '../data/projects.js';
     background-color: $black;
 
     &:hover {
-      background-color: lighten($black, 5%);
+      background-color: $black-light;
     }
   }
 
