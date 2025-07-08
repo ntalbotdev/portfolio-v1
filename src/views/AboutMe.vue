@@ -145,6 +145,7 @@ export default {
   align-items: center;
   justify-content: center;
   padding-top: $header-height;
+  line-height: 1.4;
 }
 
 .about__inner {
