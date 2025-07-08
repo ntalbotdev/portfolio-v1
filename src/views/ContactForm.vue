@@ -109,7 +109,7 @@ export default {
         </div>
       </p>
 
-      <form class="contact__form" ref="form" @submit.prevent="sendEmail">
+      <form class="contact__form" ref="form" @submit.prevent="sendEmail" aria-labelledby="contact__title">
         <AlertModal
           type="success"
           :showAlert="isAlertVisible"
@@ -139,6 +139,7 @@ export default {
             'input-error': v$.name.$error,
             'input-valid': this.name !== '',
           }"
+          aria-required="true"
         />
         <input
           type="email"
@@ -152,6 +153,7 @@ export default {
             'input-error': v$.email.$error,
             'input-valid': this.email !== '' && this.email.includes('@'),
           }"
+          aria-required="true"
         />
         <input
           type="text"
@@ -165,6 +167,7 @@ export default {
             'input-error': v$.subject.$error,
             'input-valid': this.subject !== '',
           }"
+          aria-required="true"
         />
         <textarea
           class="form__textarea"
@@ -178,6 +181,7 @@ export default {
             'input-error': v$.message.$error,
             'input-valid': this.message !== '',
           }"
+          aria-required="true"
         />
         <vue-recaptcha
           :sitekey="recaptchaSiteKey"
