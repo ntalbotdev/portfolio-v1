@@ -36,12 +36,12 @@ export default {
   transition: background 0.2s ease, transform 0.2s ease;
 
   &:hover {
-    background: darken($accent-color, 6%);
+    background: $accent-color-dark;
     transform: translateY(-2px);
   }
 
   &:active {
-    background: darken($accent-color, 12%);
+    background: $accent-color-darker;
     transform: translateY(0);
   }
 }
