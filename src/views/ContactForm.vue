@@ -104,12 +104,17 @@ export default {
       <h2 class="contact__title">{{ $t("contact.title") }}</h2>
       <p class="contact__text">
         {{ $t("contact.text") }}
-        <div class="contact__email">
+        <span class="contact__email">
           <a :href="`mailto:${emailAddress}`">{{ emailAddress }}</a>
-        </div>
+        </span>
       </p>
 
-      <form class="contact__form" ref="form" @submit.prevent="sendEmail" aria-labelledby="contact__title">
+      <form
+        class="contact__form"
+        ref="form"
+        @submit.prevent="sendEmail"
+        aria-labelledby="contact__title"
+      >
         <AlertModal
           type="success"
           :showAlert="isAlertVisible"
@@ -241,8 +246,10 @@ export default {
 .contact__email {
   margin-top: $padding-sm;
   font-weight: 500;
+  display: block;
 
   a {
+    display: inline;
     color: $secondary-color;
     text-decoration: none;
     border-bottom: 1px solid $secondary-color;
@@ -310,7 +317,7 @@ export default {
   outline: none;
   background-color: $accent-color;
   color: $secondary-color;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 
   &:hover {
     opacity: 0.7;
