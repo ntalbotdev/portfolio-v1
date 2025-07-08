@@ -92,7 +92,7 @@ export default {
       </router-link>
 
       <div class="header--right">
-        <router-link
+        <!-- <router-link
           class="header__btn"
           to="/"
           @click.native="
@@ -101,7 +101,16 @@ export default {
           "
         >
           {{ $t("header.button") }}
-        </router-link>
+        </router-link> -->
+        <a
+          class="header__btn"
+          href="https://github.com/ntalbotdev"
+          target="_blank"
+          title="github.com/ntalbotdev"
+        >
+          <FontAwesomeIcon :icon="faGithub" />
+          ntalbotdev
+      </a>
 
         <LanguageSelector />
 
@@ -298,6 +307,10 @@ export default {
   overflow: hidden;
   transition: all 0.5s ease-out;
 
+  svg {
+    margin-right: $padding-xs;
+  }
+
   &:hover {
     color: $secondary-color;
     cursor: pointer;
@@ -319,7 +332,7 @@ export default {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: $accent-color;
+    background: $primary-color;
     left: 0;
     top: 100%;
     z-index: -1;
