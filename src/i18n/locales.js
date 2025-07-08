@@ -59,7 +59,7 @@ export default {
 		projects: {
 			title: "Projects",
 			cardLinks: {
-				demo: "View Demo",
+				demo: "View demo",
 				github: "View on GitHub"
 			},
 			viewProjectsBtn: "View my work",
@@ -111,11 +111,11 @@ export default {
 			text: "N'hésitez pas à me contacter si vous avez des questions ou si vous souhaitez travailler ensemble.",
 			modals: {
 				successText: "Votre message a été envoyé, vous recevrez une réponse sous peu.",
-				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement via email."
+				errorText: "Votre message n'a pas pu être envoyé, réessayez plus tard ou contactez-moi directement via courriel."
 			},
 			form: {
-				name: "Votre Nom",
-				email: "Votre Courriel",
+				name: "Votre nom",
+				email: "Votre courriel",
 				subject: "Sujet",
 				message: "Message",
 				submit: "Envoyer"
@@ -124,7 +124,7 @@ export default {
 		projects: {
 			title: "Projets",
 			cardLinks: {
-				demo: "Voir Demo",
+				demo: "Voir démo",
 				github: "Voir sur GitHub"
 			},
 			viewProjectsBtn: "Voir mes réalisations",
