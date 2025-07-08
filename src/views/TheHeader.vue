@@ -110,7 +110,7 @@ export default {
         >
           <FontAwesomeIcon :icon="faGithub" />
           ntalbotdev
-      </a>
+        </a>
 
         <LanguageSelector />
 
@@ -270,6 +270,7 @@ export default {
 
 .header--projects.open .header__inner {
   background-color: transparent;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0);
 }
 
 .logo__link {
