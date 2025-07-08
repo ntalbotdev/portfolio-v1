@@ -7,7 +7,7 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 
 ## 📷 Screenshot
 
-![Screenshot](https://i.imgur.com/5LZfFRh.png)
+![Screenshot](https://i.imgur.com/7P5du0I.png)
 
 
 ## 💻 Technologies
