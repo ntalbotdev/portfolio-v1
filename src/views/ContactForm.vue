@@ -301,10 +301,12 @@ export default {
   padding: $padding-md;
   border-radius: 3px;
   font-size: 1rem;
+  font-family: inherit;
   border: none;
   outline: none;
   background-color: $accent-color;
   color: $secondary-color;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
 
   &:hover {
     opacity: 0.7;
