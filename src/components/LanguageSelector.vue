@@ -43,8 +43,4 @@
     transition: opacity 0.3s;
   }
 }
-
-img {
-  height: 30px;
-}
 </style>
