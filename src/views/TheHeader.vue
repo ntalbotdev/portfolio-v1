@@ -250,11 +250,13 @@ export default {
   background-color: $accent-color;
   animation: slideUpDown 0.5s;
   transition: transform 0.5s;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header--projects .header__inner {
   background-color: $accent-color;
   animation: none;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header--projects.open .header__inner {
@@ -295,7 +297,6 @@ export default {
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease-out;
-  
 
   &:hover {
     color: $secondary-color;
