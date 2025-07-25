@@ -37,23 +37,28 @@ This repository contains the following:
 
 To run this project, you will need to add the following environment variables to your `.env` file (create it in the root directory).
 
-`VITE_EMAILJS_SERVICE_ID`
+`VITE_EMAILJS_SERVICE`
 
 `VITE_EMAILJS_TEMPLATE_ID`
 
-`VITE_EMAILJS_USER_ID`
+`VITE_EMAILJS_PUBLIC_KEY`
 
 `VITE_RECAPTCHA_SITE_KEY`
 
 `VITE_EMAIL_ADDRESS`
 
-## 🚀 Getting Started
-### Prerequisites
-- Node.js
 
-### Start
+## 🚀 Getting Started
+### Installing Dependencies
+Make sure you have `Node.js` and `npm` installed.
+
 ```bash
   cd portfolio-v1
+  npm install
+```
+
+### Development
+```bash
   npm run dev
 ```
 
@@ -64,5 +69,4 @@ To run this project, you will need to add the following environment variables to
     
 ## 📘 License
 
-[MIT](https://choosealicense.com/licenses/mit/)
 
