@@ -1,15 +1,3 @@
-<script>
-export default {
-  data () {
-    return {
-      skillset: {
-        
-      }
-    }
-  }
-}
-</script>
-
 <template>
   <section class="about">
     <div class="about__inner">
@@ -32,24 +20,28 @@ export default {
               <span class="skillset__list-text">HTML</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/css.svg" alt="CSS" />
-              <span class="skillset__list-text">CSS</span>
+              <img src="/images/icons/sass.svg" alt="SCSS" />
+              <span class="skillset__list-text">SCSS</span>
             </li>
-            <li class="skillset__list-item">
+            <li class="skillset__list-item skillset__list-item--rounded">
               <img src="/images/icons/javascript.svg" alt="JavaScript" />
               <span class="skillset__list-text">JavaScript</span>
             </li>
+            <li class="skillset__list-item skillset__list-item--rounded">
+              <img src="/images/icons/typescript.svg" alt="TypeScript" />
+              <span class="skillset__list-text">TypeScript</span>
+            </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/vue.svg" alt="Vue" />
-              <span class="skillset__list-text">Vue</span>
+              <img src="/images/icons/vue.svg" alt="Vue.js" />
+              <span class="skillset__list-text">Vue.js</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/nuxt.svg" alt="Nuxt" />
               <span class="skillset__list-text">Nuxt</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/sass.svg" alt="Sass" />
-              <span class="skillset__list-text">Sass</span>
+              <img src="/images/icons/tailwindcss.svg" alt="Tailwind CSS" />
+              <span class="skillset__list-text">Tailwind CSS</span>
             </li>
           </ul>
         </div>
@@ -59,16 +51,16 @@ export default {
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[1]") }}</h3>
           <ul class="skillset__list">
             <li class="skillset__list-item">
-              <img src="/images/icons/node.svg" alt="Node" />
-              <span class="skillset__list-text">Node</span>
+              <img src="/images/icons/nodejs.svg" alt="Node.js" />
+              <span class="skillset__list-text">Node.js</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/express.svg" alt="Express" />
-              <span class="skillset__list-text">Express</span>
+              <img src="/images/icons/expressjs.svg" alt="Express.js" />
+              <span class="skillset__list-text">Express.js</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/rest.svg" alt="REST APIs" />
-              <span class="skillset__list-text">REST APIs</span>
+              <img src="/images/icons/json.svg" alt="REST API" />
+              <span class="skillset__list-text">REST API</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/strapi.svg" alt="Strapi" />
@@ -77,6 +69,10 @@ export default {
             <li class="skillset__list-item">
               <img src="/images/icons/supabase.svg" alt="Supabase" />
               <span class="skillset__list-text">Supabase</span>
+            </li>
+            <li class="skillset__list-item">
+              <img src="/images/icons/postgresql.svg" alt="PostgreSQL" />
+              <span class="skillset__list-text">PostgreSQL</span>
             </li>
           </ul>
         </div>
@@ -94,8 +90,8 @@ export default {
               <span class="skillset__list-text">GitHub</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/vscode.svg" alt="VS Code" />
-              <span class="skillset__list-text">VS Code</span>
+              <img src="/images/icons/infinite.svg" alt="CI/CD" />
+              <span class="skillset__list-text">CI/CD</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/cloudflare.svg" alt="Cloudflare" />
@@ -242,6 +238,10 @@ export default {
   width: 35px;
   height: 35px;
   color: $accent-color;
+}
+
+.skillset__list-item--rounded img {
+  border-radius: 2px;
 }
 
 .skillset__list-text {
