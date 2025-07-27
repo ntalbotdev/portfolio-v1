@@ -90,16 +90,20 @@
               <span class="skillset__list-text">GitHub</span>
             </li>
             <li class="skillset__list-item">
+              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
+              <span class="skillset__list-text">Wordpress</span>
+            </li>
+            <li class="skillset__list-item">
               <img src="/images/icons/infinite.svg" alt="CI/CD" />
               <span class="skillset__list-text">CI/CD</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/cloudflare.svg" alt="Cloudflare" />
-              <span class="skillset__list-text">Cloudflare</span>
+              <img src="/images/icons/vercel.svg" alt="Vercel" />
+              <span class="skillset__list-text">Vercel</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/wordpress.svg" alt="Wordpress" />
-              <span class="skillset__list-text">Wordpress</span>
+              <img src="/images/icons/cloudflare.svg" alt="Cloudflare" />
+              <span class="skillset__list-text">Cloudflare</span>
             </li>
             <li class="skillset__list-item">
               <img src="/images/icons/seo.svg" alt="SEO" />

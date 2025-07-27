@@ -1,6 +1,3 @@
-import ProjectsButton from "@/components/ProjectsButton.vue";
-
-
 export default {
 	en: {
 		header: {
