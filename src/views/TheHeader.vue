@@ -205,23 +205,3 @@ export default {
     </transition>
   </header>
 </template>
-
-<style lang="scss" scoped>
-@keyframes slideUpDown {
-  0% {
-    transform: translateY(-100%);
-  }
-}
-
-.slideUp-enter-active,
-.slideUp-leave-active {
-  transition-property: transform, opacity;
-  transition-duration: 0.5s;
-}
-
-.slideUp-enter-from,
-.slideUp-leave-to {
-  transform: translateY(100%);
-  opacity: 0;
-}
-</style>

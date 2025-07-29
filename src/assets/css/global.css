@@ -41,3 +41,25 @@ a,
 .hamburger-icon {
   -webkit-tap-highlight-color: transparent;
 }
+
+.footer {
+  @apply flex flex-col items-center px-8 py-6 text-sm text-center;
+  background-color: var(--primary-color);
+}
+
+@keyframes slideUpDown {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+.slideUp-enter-active,
+.slideUp-leave-active {
+  @apply transition-all duration-500;
+}
+
+.slideUp-enter-from,
+.slideUp-leave-to {
+  @apply opacity-0;
+  transform: translateY(100%);
+}
