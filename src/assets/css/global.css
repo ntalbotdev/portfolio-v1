@@ -43,6 +43,27 @@ a,
   -webkit-tap-highlight-color: transparent;
 }
 
+.projects-btn-wrapper {
+  @apply flex justify-center items-center;
+  padding-top: var(--header-height);
+}
+
+.projects-btn {
+  @apply inline-block px-10 py-4 text-xl font-semibold rounded shadow-lg transition-all duration-200;
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.projects-btn:hover {
+  background: var(--accent-color-dark);
+  transform: translateY(-2px);
+}
+
+.projects-btn:active {
+  background: var(--accent-color-darker);
+  transform: translateY(0);
+}
+
 .footer {
   @apply flex flex-col items-center px-8 py-6 text-sm text-center;
   background-color: var(--primary-color);
