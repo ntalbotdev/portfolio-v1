@@ -5,10 +5,9 @@
   --secondary-color-opaque: rgba(198, 217, 247, 0.75);
   --accent-color: #0652dd;
   --accent-color-opaque: rgba(6, 82, 221, 0.7);
-  --accent-color-light: #6d84f7;
+  --accent-color-light: #3470df;
   --accent-color-dark: #054cba;
   --accent-color-darker: #0433a6;
-  --black-light: #1a1a1a; 
   --success-color: #05c46b;
   --success-color-opaque: rgba(5, 196, 107, 0.7);
   --error-color: #ed4c67;
