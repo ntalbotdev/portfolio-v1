@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <div class="about__inner">
+    <div class="section__inner about__inner">
       <h2 class="section__title about__title">{{ $t("about.title") }}</h2>
       <p class="about__text">
         {{ $t("about.text[0]") }}
@@ -9,7 +9,7 @@
     </div>
 
     <!-- FRONT-END -->
-    <div class="about__inner">
+    <div class="section__inner about__inner">
       <h2 class="section__title about__title">{{ $t("about.skills") }}</h2>
       <div class="skillset-wrapper">
         <div class="skillset">
