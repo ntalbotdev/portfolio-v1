@@ -24,7 +24,7 @@
 }
 
 .landing__text span {
-  @apply font-bold;
+  @apply font-semibold;
   color: var(--accent-color);
 }
 
@@ -55,11 +55,10 @@
 }
 
 .scroll-btn a span:after {
-  @apply absolute left-[50%] w-4 h-4 rotate-315 translate-x-[-50%];
+  @apply absolute left-[50%] w-4 h-4 rotate-315 translate-x-[-50%] border-l-1 border-b-1 border-l-white border-b-white;
   content: "";
   bottom: -1.5rem;
-  border-left: 1px solid var(--white);
-  border-bottom: 1px solid var(--white);
+
 }
 
 @media (max-height: 520px) {
