@@ -6,7 +6,7 @@ import projects from '../data/projects.js';
 
 <template>
   <section class="projects">
-    <div class="projects__inner">
+    <div class="section__inner projects__inner">
       <h2 class="section__title projects__title">{{ $t("projects.title") }}</h2>
 
       <div class="projects__list">

@@ -23,6 +23,7 @@
 }
 
 #app {
+  @apply min-h-screen;
   font-family: "Moderustic";
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -58,9 +59,14 @@ a,
   height: 3px;
 }
 
+.section__inner {
+  @apply flex flex-col items-center justify-center p-6 sm:px-8;
+  max-width: var(--max-width);
+}
+
 .projects-btn-wrapper {
-  @apply flex justify-center items-center;
-  padding-top: var(--header-height);
+  @apply flex justify-center items-center py-8;
+  margin-top: var(--header-height);
 }
 
 .projects-btn {
@@ -81,7 +87,6 @@ a,
 
 .footer {
   @apply flex flex-col items-center px-8 py-6 text-sm text-center;
-  background-color: var(--primary-color);
 }
 
 @keyframes slideUpDown {

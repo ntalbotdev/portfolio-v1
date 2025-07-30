@@ -5,10 +5,6 @@
   padding-top: var(--header-height);
 }
 
-.projects__inner {
-  @apply flex flex-col items-center justify-center p-6 w-full;
-}
-
 .projects__list {
   @apply grid gap-4 w-full mt-4 sm:grid-cols-2 lg:grid-cols-3 justify-center;
   max-width: var(--max-width);

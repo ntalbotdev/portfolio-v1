@@ -100,7 +100,7 @@ export default {
 
 <template>
   <section class="contact">
-    <div class="contact__inner">
+    <div class="section__inner contact__inner">
       <h2 class="section__title contact__title">{{ $t("contact.title") }}</h2>
       <p class="contact__text">
         {{ $t("contact.text") }}
