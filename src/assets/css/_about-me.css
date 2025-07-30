@@ -11,23 +11,12 @@
   max-width: var(--max-width);
 }
 
-.about__title {
-  @apply text-4xl font-semibold mb-8;
-}
-
-.about__title:after {
-  @apply block w-full mt-3;
-  content: "";
-  background-color: var(--accent-color);
-  height: 3px;
-}
-
 .about__text {
   @apply text-center text-base font-light max-w-5xl sm:text-xl;
 }
 
 .about__text:last-child {
-  @apply mt-4 font-semibold;
+  @apply mt-4 font-medium;
 }
 
 .skillset-wrapper {
@@ -64,7 +53,7 @@
 }
 
 .skillset__list-text {
-  @apply font-light;
+  @apply font-light text-center;
 }
 
 .skillset__list--tools .skillset__list-text {
@@ -72,11 +61,11 @@
 }
 
 .skillset__list-link {
-  @apply font-light;
-  border: 1px solid transparent;
+  @apply font-light text-center;
 }
 
 .skillset__list-link:hover {
-	color: var(--accent-color);
-      border-bottom: 1px solid var(--accent-color);
+  @apply underline underline-offset-4;
+  color: var(--accent-color);
+
 }

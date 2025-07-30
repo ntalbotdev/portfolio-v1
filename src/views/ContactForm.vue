@@ -101,11 +101,13 @@ export default {
 <template>
   <section class="contact">
     <div class="contact__inner">
-      <h2 class="contact__title">{{ $t("contact.title") }}</h2>
+      <h2 class="section__title contact__title">{{ $t("contact.title") }}</h2>
       <p class="contact__text">
         {{ $t("contact.text") }}
-        <span class="contact__email">
-          <a :href="`mailto:${emailAddress}`">{{ emailAddress }}</a>
+        <span class="contact__email-wrapper">
+          <a class="contact__email" :href="`mailto:${emailAddress}`">
+            {{ emailAddress }}
+          </a>
         </span>
       </p>
 
@@ -175,7 +177,7 @@ export default {
           aria-required="true"
         />
         <textarea
-          class="form__textarea"
+          class="form__input form__input--textarea"
           v-model="message"
           name="message"
           :placeholder="$t('contact.form.message')"
@@ -193,6 +195,7 @@ export default {
           ref="vueRecaptcha"
           :loadRecaptchaScript="true"
           @verify="onVerify"
+          class="form__recaptcha"
         >
         </vue-recaptcha>
 
@@ -203,153 +206,3 @@ export default {
     </div>
   </section>
 </template>
-
-<style lang="scss" scoped>
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: $header-height;
-}
-
-.contact__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: $padding-lg;
-  max-width: $max-width;
-}
-
-.contact__title {
-  margin-bottom: $padding-md;
-  font-size: 2.2rem;
-  font-weight: 600;
-
-  &:after {
-    content: "";
-    width: 100%;
-    height: 3px;
-    margin-top: $padding-xs;
-    background-color: $accent-color;
-    display: block;
-  }
-}
-
-.contact__text {
-  margin-bottom: $padding-lg;
-  text-align: center;
-  font-weight: 300;
-}
-
-.contact__email {
-  margin-top: $padding-sm;
-  font-weight: 500;
-  display: block;
-
-  a {
-    display: inline;
-    color: $secondary-color;
-    text-decoration: none;
-    border-bottom: 1px solid $secondary-color;
-
-    &:hover {
-      border-color: $accent-color;
-      color: $accent-color;
-    }
-  }
-}
-
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-content: center;
-  gap: $padding-md;
-  width: 300px;
-
-  @media all and (max-width: 400px) {
-    width: 100%;
-  }
-
-  @media all and (min-width: 768px) {
-    width: 400px;
-  }
-}
-
-.form__input {
-  width: 100%;
-  padding: $padding-md;
-  border-radius: 3px;
-  border: none;
-  outline: none;
-  color: $primary-color;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.form__textarea {
-  width: 100%;
-  padding: $padding-md;
-  border-radius: 3px;
-  border: none;
-  outline: none;
-  resize: vertical;
-  color: $primary-color;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.form__input::placeholder,
-.form__textarea::placeholder {
-  opacity: 1;
-}
-
-.form__btn {
-  width: 100%;
-  padding: $padding-md;
-  border-radius: 3px;
-  font-size: 1rem;
-  font-family: inherit;
-  border: none;
-  outline: none;
-  background-color: $accent-color;
-  color: $secondary-color;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    opacity: 0.7;
-    cursor: pointer;
-  }
-}
-
-#form__recaptcha {
-  @media only screen and (max-width: 500px) {
-    transform: scale(0.875);
-    transform-origin: 50% 0;
-  }
-}
-
-.input-valid {
-  outline: 2px solid $success-color;
-  transition: outline 0.2s ease-in-out;
-}
-
-.input-error {
-  outline: 2px solid $error-color;
-  transition: outline 0.2s ease-in-out;
-}
-
-.alert-modal__text a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid $secondary-color;
-
-  &:hover {
-    border-color: $accent-color;
-    color: $accent-color;
-  }
-}
-</style>

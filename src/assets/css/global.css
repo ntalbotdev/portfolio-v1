@@ -3,6 +3,7 @@
 @import "./_header";
 @import "./_landing";
 @import "./_about-me";
+@import "./_contact-form";
 @import "./_modals";
 
 ::-webkit-scrollbar {
@@ -43,6 +44,17 @@ select,
 a,
 .hamburger-icon {
   -webkit-tap-highlight-color: transparent;
+}
+
+.section__title {
+  @apply text-4xl font-semibold mb-8;
+}
+
+.section__title:after {
+  @apply block w-full mt-3;
+  content: "";
+  background-color: var(--accent-color);
+  height: 3px;
 }
 
 .projects-btn-wrapper {

@@ -1,0 +1,71 @@
+@import "./_variables";
+
+.contact {
+  @apply flex flex-col items-center justify-center;
+  padding-top: var(--header-height);
+}
+
+.contact__inner {
+  @apply flex flex-col items-center justify-center p-6;
+  max-width: var(--max-width);
+}
+
+.contact__text {
+  @apply mb-8 text-center font-light;
+}
+
+.contact__email-wrapper {
+  @apply block mt-1;
+}
+
+.contact__email {
+  @apply font-medium inline underline underline-offset-4;
+  color: var(--secondary-color);
+}
+
+.contact__email:hover {
+  color: var(--accent-color);
+}
+
+.contact__form {
+  @apply flex flex-col items-center justify-center gap-4 w-80 sm:w-100;
+}
+
+.form__input {
+  @apply w-full p-3 rounded border-0 outline-0 bg-white drop-shadow;
+  color: var(--primary-color);
+}
+
+.form__input--textarea {
+  @apply resize-y;
+}
+
+.form__input::placeholder {
+  @apply opacity-100;
+}
+
+.form__btn {
+  @apply w-full p-4 rounded shadow-md cursor-pointer transition-opacity;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+.form__btn:hover {
+  @apply opacity-70;
+}
+
+.input-valid {
+  @apply transition-all ease-in-out;
+  outline: 2px solid var(--success-color);
+}
+
+.input-error {
+  @apply transition-all ease-in-out;
+  outline: 2px solid var(--error-color);
+}
+
+@media (max-width: 380px) {
+  .contact__form {
+    @apply w-full;
+  }
+}
