@@ -15,6 +15,7 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 - Vue.js
 - JavaScript
 - CSS
+- Tailwind CSS
 
 ## ✨ Features
 
