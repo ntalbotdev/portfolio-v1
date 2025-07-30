@@ -4,6 +4,7 @@
 @import "./_landing";
 @import "./_about-me";
 @import "./_contact-form";
+@import "./_projects";
 @import "./_modals";
 
 ::-webkit-scrollbar {

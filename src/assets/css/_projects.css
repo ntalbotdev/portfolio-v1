@@ -1,0 +1,71 @@
+@import "./_variables";
+
+.projects {
+  @apply flex flex-col items-center justify-center;
+  padding-top: var(--header-height);
+}
+
+.projects__inner {
+  @apply flex flex-col items-center justify-center p-6 w-full;
+}
+
+.projects__list {
+  @apply grid gap-4 w-full mt-4 sm:grid-cols-2 lg:grid-cols-3 justify-center;
+  max-width: var(--max-width);
+}
+
+.projects__card {
+  @apply flex flex-col p-8 rounded w-full drop-shadow;
+  background: var(--primary-color-dark);
+}
+
+.projects__card-image {
+  @apply mb-4 rounded;
+}
+
+.projects__card-title {
+  @apply mb-3 text-xl font-medium;
+}
+
+.projects__card-tags {
+  @apply flex flex-wrap gap-1;
+}
+
+.projects__card-tag {
+  @apply text-sm py-0.5 px-1.5 rounded-xs;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.projects__card-description {
+  @apply my-8 font-light;
+}
+
+.projects__card-links {
+  @apply flex mt-auto flex-col lg:flex-row gap-2;
+}
+
+.projects__card-link {
+  @apply flex items-center justify-center py-2 px-4 rounded transition-colors drop-shadow;
+  color: var(--secondary-color);
+}
+
+.projects__card-link:hover {
+  background-color: var(--accent-color-light);
+}
+
+.projects__card-link--demo {
+  background-color: var(--accent-color);
+}
+
+.projects__card-link--github {
+  @apply bg-black;
+}
+
+.projects__card-link--github:hover {
+  @apply bg-black/50;
+}
+
+.projects__card-link svg {
+  @apply mr-2;
+}
