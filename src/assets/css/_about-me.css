@@ -1,13 +1,8 @@
 @import "./_variables";
 
 .about {
-  @apply flex flex-col items-center justify-center gap-16;
+  @apply flex flex-col items-center justify-center gap-20;
   padding-top: var(--header-height);
-}
-
-.about__inner {
-  @apply flex flex-col items-center justify-center px-8;
-  max-width: var(--max-width);
 }
 
 .about__text {
