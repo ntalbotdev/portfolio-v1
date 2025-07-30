@@ -10,13 +10,13 @@
 }
 
 .header__inner.scrolled {
-  @apply transition-transform duration-500 shadow-md;
+  @apply transition-all duration-500 shadow-md;
   background-color: var(--accent-color);
   animation: slideUpDown 0.5s;
 }
 
 .header--projects .header__inner {
-  @apply shadow-md;
+  @apply shadow-md transition-all duration-500;
   background-color: var(--accent-color);
 }
 
