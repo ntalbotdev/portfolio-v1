@@ -6,12 +6,12 @@
 }
 
 .projects__list {
-  @apply grid gap-4 w-full mt-4 sm:grid-cols-2 lg:grid-cols-3 justify-center;
+  @apply grid gap-4 w-full sm:grid-cols-2 lg:grid-cols-3;
   max-width: var(--max-width);
 }
 
 .projects__card {
-  @apply flex flex-col p-8 rounded w-full drop-shadow;
+  @apply flex flex-col p-6 rounded w-full drop-shadow;
   background: var(--primary-color-dark);
 }
 
