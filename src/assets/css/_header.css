@@ -5,18 +5,18 @@
 }
 
 .header__inner {
-  @apply fixed w-full top-0 left-0 flex items-center z-10 bg-transparent transition-colors duration-500 px-6 select-none;
+  @apply fixed w-full top-0 left-0 flex items-center z-10 bg-transparent transition-colors duration-500 px-4 sm:px-6 select-none;
   height: var(--header-height);
 }
 
 .header__inner.scrolled {
-  @apply transition-transform duration-500 shadow-md;
+  @apply transition-all duration-500 shadow-md;
   background-color: var(--accent-color);
   animation: slideUpDown 0.5s;
 }
 
 .header--projects .header__inner {
-  @apply shadow-md;
+  @apply shadow-md transition-all duration-500;
   background-color: var(--accent-color);
 }
 
