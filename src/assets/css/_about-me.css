@@ -1,13 +1,12 @@
 @import "./_variables";
 
 .about {
-  @apply flex flex-col items-center justify-center gap-12;
+  @apply flex flex-col items-center justify-center gap-16;
   padding-top: var(--header-height);
-  line-height: 1.4;
 }
 
 .about__inner {
-  @apply flex flex-col items-center justify-center p-8;
+  @apply flex flex-col items-center justify-center px-8;
   max-width: var(--max-width);
 }
 
@@ -67,5 +66,4 @@
 .skillset__list-link:hover {
   @apply underline underline-offset-4;
   color: var(--accent-color);
-
 }
