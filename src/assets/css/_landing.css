@@ -5,7 +5,7 @@
 }
 
 .parallax-bg {
-  @apply absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed will-change-transform;
+  @apply absolute top-0 left-0 w-full h-full will-change-transform;
   background: url("/images/landing-bg.jpg") center/cover;
 }
 
@@ -44,21 +44,17 @@
 }
 
 .scroll-btn a span {
-  @apply absolute top-0 left-[50%] w-7.5 h-12.5 border-2 border-white border-solid rounded-full;
-  margin-left: -6px;
+  @apply absolute top-0 left-1/2 -translate-x-1/2 w-7.5 h-12.5 border-2 border-white border-solid rounded-full;
 }
 
 .scroll-btn a span:before {
-  @apply absolute top-2 left-[50%] w-1.5 h-1.5 bg-white rounded-full;
+  @apply absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full;
   content: "";
-  margin-left: -3px;
 }
 
 .scroll-btn a span:after {
-  @apply absolute left-[50%] w-4 h-4 rotate-315 translate-x-[-50%] border-l-1 border-b-1 border-l-white border-b-white;
+  @apply absolute left-1/2 -bottom-6 -translate-x-1/2 w-4 h-4 rotate-315 border-l-1 border-b-1 border-l-white border-b-white;
   content: "";
-  bottom: -1.5rem;
-
 }
 
 @media (max-height: 520px) {
