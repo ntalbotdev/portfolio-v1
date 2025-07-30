@@ -65,5 +65,6 @@
 }
 
 .alert-modal__text a:hover {
-  border-bottom: 1px solid var(--secondary-color);
+  @apply underline underline-offset-4;
+  color: var(--accent-color);
 }
