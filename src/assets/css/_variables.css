@@ -17,7 +17,6 @@
   --error-color-opaque: rgba(237, 76, 103, 0.7);
   --info-color: var(--accent-color);
   --info-color-opaque: var(--accent-color-opaque);
-  --landing-image-tint: #03247b; 
 
   --header-height: 70px;
   --max-width: 1280px;
