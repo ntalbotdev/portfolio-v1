@@ -2,6 +2,7 @@
 @import "./_variables";
 @import "./_header";
 @import "./_landing";
+@import "./_about-me";
 @import "./_modals";
 
 ::-webkit-scrollbar {
