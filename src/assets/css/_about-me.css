@@ -1,0 +1,71 @@
+@import "./_variables";
+
+.about {
+  @apply flex flex-col items-center justify-center gap-12;
+  padding-top: var(--header-height);
+  line-height: 1.4;
+}
+
+.about__inner {
+  @apply flex flex-col items-center justify-center p-8;
+  max-width: var(--max-width);
+}
+
+.about__text {
+  @apply text-center text-base font-light max-w-5xl sm:text-xl;
+}
+
+.about__text:last-child {
+  @apply mt-4 font-medium;
+}
+
+.skillset-wrapper {
+  @apply flex flex-col items-center gap-16;
+}
+
+.skillset {
+  @apply flex flex-col items-center justify-center;
+}
+
+.skillset__title {
+  @apply mb-6 text-2xl font-semibold;
+}
+
+.skillset__list {
+  @apply flex flex-wrap justify-center gap-4;
+}
+
+.skillset__list-item {
+  @apply flex flex-col items-center justify-center;
+}
+
+.skillset__list--tools .skillset__list-item {
+  @apply w-28 h-28 p-2 gap-2 rounded-md drop-shadow transition-all duration-300;
+  background-color: var(--primary-color-dark);
+}
+
+.skillset__list .skillset__list-item svg,
+.skillset__list .skillset__list-item img {
+  @apply w-9 h-9;
+}
+.skillset__list-item--rounded img {
+  @apply rounded-sm;
+}
+
+.skillset__list-text {
+  @apply font-light text-center;
+}
+
+.skillset__list--tools .skillset__list-text {
+  @apply text-sm font-normal;
+}
+
+.skillset__list-link {
+  @apply font-light text-center;
+}
+
+.skillset__list-link:hover {
+  @apply underline underline-offset-4;
+  color: var(--accent-color);
+
+}

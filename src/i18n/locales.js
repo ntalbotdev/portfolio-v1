@@ -2,7 +2,6 @@ export default {
 	en: {
 		header: {
 			metaTitle: "Web Developer",
-			button: "Let's connect",
 			nav: {
 				home: "Home",
 				about: "About",
@@ -15,7 +14,7 @@ export default {
 			firstName: "Nicolas",
 			textBig: "Hello,",
 			text: [
-				"I'm <span>Nicolas</span>, a web developer from Montreal, Canada. ",
+				"I'm <span>Nicolas</span>, web developer from Montreal, Canada. ",
 				"I also do freelance work."
 			]
 		},
@@ -67,7 +66,6 @@ export default {
 	fr: {
 		header: {
 			metaTitle: "Développeur web",
-			button: "Me contacter",
 			nav: {
 				home: "Accueil",
 				about: "À propos",

@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "./_variables";
+@import "./_header";
+@import "./_landing";
+@import "./_about-me";
+@import "./_contact-form";
+@import "./_projects";
+@import "./_modals";
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full;
+  background: var(--accent-color);
+  border: 3px solid var(--primary-color);
+}
+
+#app {
+  font-family: "Moderustic";
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+body:has(.header__nav-hamburger-icon .active),
+main {
+  @apply overflow-hidden;
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+input,
+textarea,
+button,
+select,
+a,
+.hamburger-icon {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section__title {
+  @apply text-4xl font-semibold mb-8;
+}
+
+.section__title:after {
+  @apply block w-full mt-3;
+  content: "";
+  background-color: var(--accent-color);
+  height: 3px;
+}
+
+.projects-btn-wrapper {
+  @apply flex justify-center items-center;
+  padding-top: var(--header-height);
+}
+
+.projects-btn {
+  @apply inline-block px-10 py-4 text-xl font-semibold rounded shadow-lg transition-all duration-200;
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.projects-btn:hover {
+  background: var(--accent-color-dark);
+  transform: translateY(-2px);
+}
+
+.projects-btn:active {
+  background: var(--accent-color-darker);
+  transform: translateY(0);
+}
+
+.footer {
+  @apply flex flex-col items-center px-8 py-6 text-sm text-center;
+  background-color: var(--primary-color);
+}
+
+@keyframes slideUpDown {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 0.85rem;
+    }
+  }
+
+.slideUp-enter-active,
+.slideUp-leave-active {
+  @apply transition-all duration-500;
+}
+
+.slideUp-enter-from,
+.slideUp-leave-to {
+  @apply opacity-0;
+  transform: translateY(100%);
+}

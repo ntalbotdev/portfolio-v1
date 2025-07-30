@@ -1,0 +1,68 @@
+@import "./_variables";
+
+.landing {
+  @apply h-screen flex flex-col items-center justify-center;
+}
+
+.parallax-bg {
+  @apply absolute top-0 left-0 w-full h-full bg-cover bg-center bg-fixed will-change-transform;
+  background: url("/images/landing-bg.jpg") center/cover;
+}
+
+.parallax-bg::before {
+  @apply absolute top-0 left-0 w-full h-full bg-black/20;
+  content: "";
+}
+
+.landing__inner {
+  @apply text-white p-4 block text-center relative max-w-180 md:px-0;
+}
+
+.landing__text {
+  @apply inline font-light text-3xl;
+  text-shadow: 1px 1px var(--color-black);
+}
+
+.landing__text span {
+  @apply font-semibold;
+  color: var(--accent-color);
+}
+
+.landing__text--big {
+  @apply block mb-3 text-5xl font-normal sm:text-6xl;
+  text-shadow: 2px 2px var(--color-black);
+}
+
+.scroll-btn {
+  @apply absolute bottom-0 flex items-center;
+  animation: MoveUpDown 3s ease-in-out infinite;
+}
+
+.scroll-btn a {
+  @apply cursor-pointer;
+  padding-top: 100px;
+}
+
+.scroll-btn a span {
+  @apply absolute top-0 left-[50%] w-7.5 h-12.5 border-2 border-white border-solid rounded-full;
+  margin-left: -6px;
+}
+
+.scroll-btn a span:before {
+  @apply absolute top-2 left-[50%] w-1.5 h-1.5 bg-white rounded-full;
+  content: "";
+  margin-left: -3px;
+}
+
+.scroll-btn a span:after {
+  @apply absolute left-[50%] w-4 h-4 rotate-315 translate-x-[-50%] border-l-1 border-b-1 border-l-white border-b-white;
+  content: "";
+  bottom: -1.5rem;
+
+}
+
+@media (max-height: 520px) {
+  .scroll-btn {
+    display: none;
+  }
+}

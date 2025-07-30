@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="about__inner">
-      <h2 class="about__title">{{ $t("about.title") }}</h2>
+      <h2 class="section__title about__title">{{ $t("about.title") }}</h2>
       <p class="about__text">
         {{ $t("about.text[0]") }}
       </p>
@@ -10,11 +10,11 @@
 
     <!-- FRONT-END -->
     <div class="about__inner">
-      <h2 class="about__title">{{ $t("about.skills") }}</h2>
-      <div class="skillset__wrapper">
+      <h2 class="section__title about__title">{{ $t("about.skills") }}</h2>
+      <div class="skillset-wrapper">
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[0]") }}</h3>
-          <ul class="skillset__list">
+          <ul class="skillset__list skillset__list--tools">
             <li class="skillset__list-item">
               <img src="/images/icons/html.svg" alt="HTML" />
               <span class="skillset__list-text">HTML</span>
@@ -49,7 +49,7 @@
         <!-- BACK-END & APIS -->
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[1]") }}</h3>
-          <ul class="skillset__list">
+          <ul class="skillset__list skillset__list--tools">
             <li class="skillset__list-item">
               <img src="/images/icons/nodejs.svg" alt="Node.js" />
               <span class="skillset__list-text">Node.js</span>
@@ -80,7 +80,7 @@
         <!-- TOOLS & PLATFORMS -->
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[2]") }}</h3>
-          <ul class="skillset__list">
+          <ul class="skillset__list skillset__list--tools">
             <li class="skillset__list-item">
               <img src="/images/icons/git.svg" alt="Git" />
               <span class="skillset__list-text">Git</span>
@@ -115,7 +115,7 @@
         <!-- CERTIFICATIONS -->
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[3]") }}</h3>
-          <ul class="skillset__list--large">
+          <ul class="skillset__list">
             <li class="skillset__list-item">
               <a class="skillset__list-link" href="">{{ $t("about.certificates[0]") }}</a>
             </li>
@@ -125,9 +125,9 @@
         <!-- SOFT SKILLS -->
         <div class="skillset">
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[4]") }}</h3>
-          <ul class="skillset__list--large">
+          <ul class="skillset__list">
             <li class="skillset__list-item">
-              <p>
+              <p class="skillset__list-text">
                 {{ $t("about.softSkills") }}
               </p>
             </li>
@@ -137,143 +137,3 @@
     </div>
   </section>
 </template>
-
-<style lang="scss" scoped>
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: $header-height;
-  line-height: 1.4;
-}
-
-.about__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: calc($padding-lg * 2);
-  padding: $padding-lg;
-  max-width: $max-width;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.about__title {
-  margin-bottom: $padding-md;
-  font-size: 2.2rem;
-  font-weight: 600;
-
-  &:after {
-    content: "";
-    width: 100%;
-    height: 3px;
-    margin-top: $padding-xs;
-    background-color: $accent-color;
-    display: block;
-  }
-}
-
-.about__text {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 300;
-
-  @media (min-width: 768px) {
-    font-size: 1.3rem;
-  }
-
-  &:last-child {
-    margin-top: $padding-sm;
-    font-weight: 500;
-  }
-}
-
-.skillset__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.skillset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: $padding-lg;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.skillset__title {
-  margin-bottom: $padding-md;
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.skillset__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: $padding-md;
-}
-
-.skillset__list .skillset__list-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $primary-color-dark;
-  width: 110px;
-  height: 110px;
-  border-radius: 6px;
-}
-
-.skillset__list .skillset__list-item svg,
-.skillset__list .skillset__list-item img {
-  width: 35px;
-  height: 35px;
-  color: $accent-color;
-}
-
-.skillset__list-item--rounded img {
-  border-radius: 2px;
-}
-
-.skillset__list-text {
-  margin-top: $padding-sm;
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-.skillset__list--large {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  gap: $padding-sm;
-  text-align: center;
-
-  p {
-    font-weight: 300;
-  }
-
-  .skillset__list-link {
-    text-decoration: none;
-    color: $secondary-color;
-    font-weight: 300;
-
-    &:hover {
-      color: $accent-color;
-      border-bottom: 1px solid $accent-color;
-    }
-  }
-}
-</style>

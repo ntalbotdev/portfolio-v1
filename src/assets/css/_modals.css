@@ -1,0 +1,70 @@
+@import "./_variables";
+
+.alert-modal__backdrop {
+  @apply fixed inset-0 z-50 bg-black/50 top-0 left-0 w-full h-full flex items-center justify-center;
+}
+
+.alert-modal {
+  @apply flex flex-wrap items-center justify-center p-8 rounded shadow-lg max-w-lg;
+  background-color: var(--primary-color);
+  width: calc(100% - 3em);
+}
+
+.alert-modal__icon-wrapper {
+  @apply flex relative p-10;
+}
+
+.alert-modal__icon {
+  @apply w-full absolute drop-shadow;
+  top: -54px;
+  transform: translateX(-50%);
+}
+
+.alert-modal__text {
+  @apply text-center text-lg;
+  color: var(--secondary-color);
+}
+
+.alert-modal__button {
+  @apply mt-8 text-lg font-semibold p-3 rounded transition-colors duration-300 cursor-pointer drop-shadow;
+  width: 50%;
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+.alert-modal--info .alert-modal__button {
+  background-color: var(--info-color);
+  color: var(--secondary-color);
+}
+
+.alert-modal--info .alert-modal__button:hover {
+  background-color: var(--info-color-opaque);
+}
+
+.alert-modal--success .alert-modal__button {
+  background-color: var(--success-color);
+  color: var(--primary-color);
+}
+
+.alert-modal--success .alert-modal__button:hover {
+  background-color: var(--success-color-opaque);
+}
+
+.alert-modal--error .alert-modal__button {
+  background-color: var(--error-color);
+  color: var(--primary-color);
+}
+
+.alert-modal--error .alert-modal__button:hover {
+  background-color: var(--error-color-opaque);
+}
+
+.alert-modal__text a {
+  @apply font-semibold;
+  color: var(--secondary-color);
+}
+
+.alert-modal__text a:hover {
+  @apply underline underline-offset-4;
+  color: var(--accent-color);
+}
