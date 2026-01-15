@@ -1,4 +1,3 @@
-
 # Portfolio
 
 This portfolio is a showcase of my work as a front-end developer, featuring a selection of projects that highlight my skills in Vue.js, HTML, CSS, and JavaScript. Each project includes a brief description, screenshots, and a link to the live demo or code repository.
@@ -9,13 +8,13 @@ This portfolio is a showcase of my work as a front-end developer, featuring a se
 
 ![Screenshot](https://i.imgur.com/NOrrBUo.png)
 
-
 ## 💻 Technologies
 
 - Vue.js
 - JavaScript
 - CSS
 - Tailwind CSS
+- Vite
 
 ## ✨ Features
 
@@ -50,9 +49,10 @@ To run this project, you will need to add the following environment variables to
 
 `VITE_EMAIL_ADDRESS`
 
-
 ## 🚀 Getting Started
+
 ### Installing Dependencies
+
 Make sure you have `Node.js` and `npm` installed.
 
 ```bash
@@ -60,11 +60,13 @@ npm install
 ```
 
 ### Development
+
 ```bash
 npm run dev
 ```
 
 ### Build
+
 ```bash
 npm run build
 ```
