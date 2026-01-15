@@ -94,10 +94,6 @@
               <span class="skillset__list-text">Wordpress</span>
             </li>
             <li class="skillset__list-item">
-              <img src="/images/icons/infinite.svg" alt="CI/CD" />
-              <span class="skillset__list-text">CI/CD</span>
-            </li>
-            <li class="skillset__list-item">
               <img src="/images/icons/vercel.svg" alt="Vercel" />
               <span class="skillset__list-text">Vercel</span>
             </li>
@@ -117,7 +113,9 @@
           <h3 class="skillset__title">{{ $t("about.skillsetTitle[3]") }}</h3>
           <ul class="skillset__list">
             <li class="skillset__list-item">
-              <a class="skillset__list-link" href="">{{ $t("about.certificates[0]") }}</a>
+              <a class="skillset__list-link" href="">
+                {{ $t("about.certificates[0]") }}
+              </a>
             </li>
           </ul>
         </div>
