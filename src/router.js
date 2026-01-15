@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
-import i18n from './i18n/i18n.js';
 import { watch } from 'vue';
+import i18n from './i18n/i18n.js';
 import Home from './views/Home.vue';
 import Projects from './views/Projects.vue';
 
