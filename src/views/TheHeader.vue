@@ -106,7 +106,9 @@ export default {
 
         <div
           class="header__nav-hamburger-icon"
-          :class="{ 'header__nav-hamburger-icon--dark': (isOpen && !scrolled) || isOpen }"
+          :class="{
+            'header__nav-hamburger-icon--dark': (isOpen && !scrolled) || isOpen,
+          }"
           @click="toggleSidebar"
         >
           <div :class="{ active: isOpen }"></div>
@@ -153,11 +155,6 @@ export default {
             </router-link>
           </li>
           <li class="nav__item">
-            <a class="nav__link" :href="resumeUrl" target="_blank">
-              <span class="link__text">{{ $t("header.nav.resume") }}</span>
-            </a>
-          </li>
-          <li class="nav__item">
             <router-link
               class="nav__link"
               to="/"
@@ -178,13 +175,6 @@ export default {
             target="_blank"
           >
             <FontAwesomeIcon :icon="faGithub" />
-          </a>
-          <a
-            class="social__link"
-            href="https://codepen.io/ntalbotdev"
-            target="_blank"
-          >
-            <FontAwesomeIcon :icon="faCodepen" />
           </a>
           <a
             class="social__link"

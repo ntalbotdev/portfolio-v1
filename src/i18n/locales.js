@@ -6,7 +6,6 @@ export default {
 				home: "Home",
 				about: "About",
 				projects: "Projects",
-				resume: "Resume",
 				contact: "Contact"
 			}
 		},
@@ -60,7 +59,7 @@ export default {
 			},
 			viewProjectsBtn: "View my work",
 		},
-		footerRights:  "All rights reserved.",
+		footerRights: "All rights reserved.",
 		modalClose: "Close",
 	},
 	fr: {
@@ -70,7 +69,6 @@ export default {
 				home: "Accueil",
 				about: "À propos",
 				projects: "Projets",
-				resume: "Mon CV",
 				contact: "Contact"
 			}
 		},
@@ -78,7 +76,7 @@ export default {
 			firstName: "Nicolas",
 			textBig: "Bonjour,",
 			text: [
-				"Je suis <span>Nicolas</span>, développeur web de Montréal, Canada. ",
+				"Je suis <span>Nicolas</span>, développeur web de Montréal, Canada.",
 				"Je propose également mes services en freelance."
 			]
 		},
@@ -86,7 +84,7 @@ export default {
 			title: "À propos de moi",
 			text: [
 				"Je suis Nicolas, développeur web de Montréal, et j'excelle à transformer des concepts de design en expériences ultra-rapides et fluides. Que ce soit pour façonner des interfaces front-end intuitives avec des frameworks JavaScript modernes ou architecturer des services back-end robustes et des API évolutives, je place toujours la performance, l'accessibilité et la satisfaction utilisateur au cœur de mon travail.",
-				"Collaborons pour créer quelque chose d'exceptionnel !",
+				"Collaborons pour créer quelque chose d'exceptionnel!",
 			],
 			skills: "Compétences",
 			skillsetTitle: [
@@ -124,7 +122,7 @@ export default {
 			},
 			viewProjectsBtn: "Voir mes réalisations",
 		},
-		footerRights:  "Tous droits réservés.",
+		footerRights: "Tous droits réservés.",
 		modalClose: "Fermer",
 	},
 
